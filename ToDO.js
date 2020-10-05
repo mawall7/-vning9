@@ -16,7 +16,7 @@ document.getElementById("btn").addEventListener('click',function(){
            }
 });  //var para = document.createElement('P');para.innerText="new";para.innerHTML=document.getElementById("input").value}
 
-function Addthing(inputvalue){ //thing as item of to list
+function Addthing(inputvalue){ //thing as item of to do list
   
     let d = document.createElement("P"); d.innerText=inputvalue;document.body.appendChild(d);
     
@@ -35,8 +35,7 @@ function Addthing(inputvalue){ //thing as item of to list
     if(mycount==0){
     document.getElementById(d.id).innerHTML = d.name.strike();//d.id.strike();
     document.getElementById(d.id).style.backgroundColor = "lightblue";
-      
-    
+          
     
 }
     if(mycount==1){
@@ -44,7 +43,8 @@ function Addthing(inputvalue){ //thing as item of to list
         document.getElementById(d.id).innerHTML = d.name;
         document.getElementById(d.id).style.backgroundColor = "white";}
         mycount +=1;
-        v = document.createElement("BUTTON");
+        v = AddRemoveButton(d);//document.createElement("BUTTON");
+
 
         d.append(v);
         v.id = d.innerText.value +"x";
