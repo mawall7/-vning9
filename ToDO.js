@@ -47,7 +47,7 @@ function Addthing(inputvalue){ //thing as item of to do list
 
 
         d.append(v);
-        v.id = d.innerText.value +"x";
+        v.id = "xbutn"//d.innerText.value +"x";
         v.addEventListener('click',function(){console.log("worked");d.remove()}); 
         //console.log(mycount);
     
@@ -62,11 +62,9 @@ function AddRemoveButton(d=d){
 
     v = document.createElement("BUTTON");//v = document.createElement("BUTTON");
     var txt = document.createTextNode(" \u00D7"); // v = document.createElement("BUTTON"); 
-    v.id = d.innerText.value +"x";//  v.id = d.innerText.value +"x";
+    v.id = "xbutn";//  v.id = d.innerText.value +"x";
     v.append(txt);    
     v.addEventListener('click',function(){d.remove()});
     //document.getElementById("d.innerText.value" + "x").style.width = "10px";
     return v;
 }
-
-
